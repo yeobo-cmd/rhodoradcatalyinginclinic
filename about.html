@@ -20,6 +20,7 @@
     
 </head>
 <body>
+  <div class="animate-bottom">
   <div id="introo"></div>
   <nav>
     <div id="intro">
@@ -47,7 +48,8 @@
             </div>
     </div>
 </div>
-<div class="card1-fluid text-justify" style="border: solid black; display: flex; margin: -200px 50px 350px 50px; background-color: rgb(42, 42, 110); border-radius: 10px;" >
+<div class="appear3">
+<div class="card1-fluid text-justify " style="border: solid black; display: flex; margin: -200px 50px 350px 50px; background-color: rgb(42, 42, 110); border-radius: 10px;" >
   
   <div class="card-body" style="color: rgb(255, 255, 255); font-family: 'Montserrat', sans-serif;">
     <div class="blockquote mb-0" >
@@ -82,6 +84,7 @@
     </div>
   </div>
 </div>
+</div>
 
 
   <footer>
@@ -112,6 +115,7 @@
           </div>
     </div>
   </footer>
+  </div>
   <script>
      $(document).ready(function() {
             $(".menu-icon").on("click", function() {
@@ -131,5 +135,18 @@
             }
       })
   </script>
+    <script>
+      const appear3 = document.querySelector('.appear3'); 
+  const cb3 = function(entries){
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('inview');
+        entry.unobserve(entry.target)
+      }
+    });
+  }
+  const io3 = new IntersectionObserver(cb3);
+  io3.observe(appear3);
+    </script>
 </body>
 </html>

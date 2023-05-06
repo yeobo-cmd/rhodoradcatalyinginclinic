@@ -18,6 +18,7 @@
     <link rel="icon" href="rdcimages/logo.png">
 </head>
 <body>
+  <div class="animate-bottom">
   <div id="introo"></div>
   <nav>
     <div id="intro">
@@ -39,12 +40,13 @@
     </nav>
   <div class="carouselattri">
     <div class="background">
-            <div class="intro">
+            <div class="introooooooo">
                 <h1>Rhodora D. Cata Lying in Clinic</h1>
                 <h2>Connect with Us</h2>
             </div>
     </div>
 </div>
+<div class="appear3">
 <div class="contactt" style="margin: -190px 50px 60px 50px; font-style: 'Montserrat', sans-serif;">
   <div class="row" style="justify-content: space-between;">
     <div class="col-sm-6">
@@ -94,7 +96,9 @@
             </div>
           </div>
     </div>
+  </div>
   </footer>
+  </div>
   <script>
     $(document).ready(function() {
            $(".menu-icon").on("click", function() {
@@ -114,5 +118,18 @@
            }
      })
  </script>
+  <script>
+    const appear3 = document.querySelector('.appear3'); 
+const cb3 = function(entries){
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('inview');
+      entry.unobserve(entry.target)
+    }
+  });
+}
+const io3 = new IntersectionObserver(cb3);
+io3.observe(appear3);
+  </script>
 </body>
 </html>

@@ -2,6 +2,50 @@
     scroll-behavior: smooth;
  
 }
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #5f5f5f;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 1s linear infinite;
+    z-index: 2;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
 
 ::-webkit-scrollbar {
     width: 7px;
@@ -26,7 +70,7 @@
   width: 90%;
   color: #fff;
   position: absolute;
-  top: 30%;
+  top: 11%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -34,6 +78,28 @@
   
   
 }
+.introooooooo{
+    font-size: 36px;
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+#introooo{
+    font-size: 36px;
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+  }
 .carouselattri{
     min-height: 80vh;
     min-width: 100%;
