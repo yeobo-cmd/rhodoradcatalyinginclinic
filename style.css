@@ -3,36 +3,50 @@
  
 }
 #loader {
-    position: absolute;
+    position: fixed;
+    justify-content: center;
     left: 50%;
     top: 50%;
     z-index: 1;
-    width: 120px;
-    height: 120px;
-    margin: -76px 0 0 -76px;
-    border: 16px solid #5f5f5f;
+    width: 4rem;
+    height: 4rem;
+    background: #757575;
     border-radius: 50%;
-    border-top: 16px solid #3498db;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 1s linear infinite;
-    z-index: 2;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    transform: -webkit-translate(-50%, -50%);
+    transform: -moz-translate(-50%, -50%);
+    transform: -ms-translate(-50%, -50%);
   }
-  
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+  #loader:after{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    margin: auto;
+    background: #222b32;
+     border-radius: 50%;
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  #loader:before{
+    content: '';
+    position: absolute;
+    inset: 0px;
+    margin: auto;
+    background: #de3500;
+    animation: crlMugLoader 2.5s linear infinite alternate;
   }
+  @keyframes crlMugLoader {
+    0%  ,10% { transform: translateY(64px) }
+    90% , 100% { transform: translateY(0px) }
+  }
+      
+
+      
   
   /* Add animation to "page content" */
   .animate-bottom {
     position: relative;
     -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 6s;
     animation-name: animatebottom;
     animation-duration: 1s
   }
